@@ -1,4 +1,4 @@
-   import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Globe, ArrowLeft, ArrowRight, MessageCircle, Calendar, MapPin,
   CheckCircle2, Settings, BarChart3, Plus, Pencil, Trash2, Users,
@@ -6,6 +6,31 @@ import {
   Brain, Heart, Palette, Puzzle, MessagesSquare, Activity, User
 
 } from "lucide-react";
+
+if (typeof window !== "undefined" && !window.storage) {
+  window.storage = {
+    async get(key, shared) {
+      const raw = localStorage.getItem(`rifka:${shared ? "shared" : "local"}:${key}`);
+      if (raw === null) throw new Error("not found");
+      return { key, value: raw, shared: !!shared };
+    },
+    async set(key, value, shared) {
+      localStorage.setItem(`rifka:${shared ? "shared" : "local"}:${key}`, value);
+      return { key, value, shared: !!shared };
+    },
+    async delete(key, shared) {
+      localStorage.removeItem(`rifka:${shared ? "shared" : "local"}:${key}`);
+      return { key, deleted: true, shared: !!shared };
+    },
+    async list(prefix, shared) {
+      const scope = `rifka:${shared ? "shared" : "local"}:`;
+      const keys = Object.keys(localStorage)
+        .filter((k) => k.startsWith(scope + (prefix || "")))
+        .map((k) => k.slice(scope.length));
+      return { keys, prefix, shared: !!shared };
+    },
+  };
+}
 
 /* ----------------------------------------------------------------------
    RIFKA — Mental Health & Coaching Discovery + Booking Platform (MVP)
@@ -916,4 +941,3 @@ function AdminBookings({ t, lang, store }) {
     </div>
   );
 }
- 
