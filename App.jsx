@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+   import React, { useState, useEffect, useCallback } from "react";
 import {
   Globe, ArrowLeft, ArrowRight, MessageCircle, Calendar, MapPin,
   CheckCircle2, Settings, BarChart3, Plus, Pencil, Trash2, Users,
@@ -6,32 +6,6 @@ import {
   Brain, Heart, Palette, Puzzle, MessagesSquare, Activity, User
 
 } from "lucide-react";
-
-if (typeof window !== "undefined" && !window.storage) {
-  window.storage = {
-    async get(key, shared) {
-      const raw = localStorage.getItem(`rifka:${shared ? "shared" : "local"}:${key}`);
-      if (raw === null) throw new Error("not found");
-      return { key, value: raw, shared: !!shared };
-    },
-    async set(key, value, shared) {
-      localStorage.setItem(`rifka:${shared ? "shared" : "local"}:${key}`, value);
-      return { key, value, shared: !!shared };
-    },
-    async delete(key, shared) {
-      localStorage.removeItem(`rifka:${shared ? "shared" : "local"}:${key}`);
-      return { key, deleted: true, shared: !!shared };
-    },
-    async list(prefix, shared) {
-      const scope = `rifka:${shared ? "shared" : "local"}:`;
-      const keys = Object.keys(localStorage)
-        .filter((k) => k.startsWith(scope + (prefix || "")))
-        .map((k) => k.slice(scope.length));
-      return { keys, prefix, shared: !!shared };
-    },
-  };
-}
-
 
 /* ----------------------------------------------------------------------
    RIFKA — Mental Health & Coaching Discovery + Booking Platform (MVP)
@@ -94,14 +68,14 @@ const DEFAULT_SPECIALISTS = [
   },
   {
     id: "s_hanady", order: 4, categoryIds: ["c5", "c4"], active: true, icon: "puzzle",
-    name_en: "Hanady Abou Meghli", name_ar: "هنادي بو مغلي",
-    title_en: "Early Childhood · Teen & Adolescent · Family Guidance", title_ar: "أخصائية تربية خاصة وتدخل سلوكي",
+    name_en: "Hanady Abou Meghli", name_ar: "هنادي أبو مغلي",
+    title_en: "Early Childhood · Teen & Adolescent · Family", title_ar: "الطفولة المبكرة · المراهقين · العائلة",
     bio_en: "Specialist in special education, behavioral intervention, child & adolescent mental health, and family guidance.",
     bio_ar: "أخصائية بالتربية الخاصة، التدخل السلوكي، الصحة النفسية للأطفال والمراهقين، وتوجيه الأهل.",
     location_en: "Beirut - Sodeco", location_ar: "بيروت - الصوديكو",
     mode: "both", languages: "AR, EN",
     expertise_en: "Family Guidance, Special Education, Behavioral Intervention, Emotional Regulation",
-    expertise_ar: "التربية الخاصة، الدعم السلوكي، صعوبات التعلّم، الدمج",
+    expertise_ar: "توجيه الأهل، التربية الخاصة، التدخل السلوكي، التنظيم الانفعالي",
     price: "Contact for pricing", credentials_en: "Special Education Specialist", credentials_ar: "أخصائية تربية خاصة",
     calendly: "https://calendly.com/hanadi-kronful/30min", whatsapp: "96170005833",
   },
@@ -351,6 +325,7 @@ export default function Rifka() {
   const [answers, setAnswers] = useState({ q1: "", q2: "", q3: "", q4: "" });
   const [search, setSearch] = useState("");
   const [activeFilter, setActiveFilter] = useState("all");
+  const [adminUnlocked, setAdminUnlocked] = useState(false);
   const store = useStore();
   const t = T[lang];
   const isAr = lang === "ar";
@@ -420,7 +395,11 @@ export default function Rifka() {
         {view === "confirm" && activeSpecialist && (
           <ConfirmView t={t} lang={lang} sp={activeSpecialist} answers={answers} onDone={goHome} />
         )}
-        {view === "admin" && <AdminView t={t} lang={lang} store={store} />}
+        {view === "admin" && (
+          adminUnlocked
+            ? <AdminView t={t} lang={lang} store={store} />
+            : <AdminGate lang={lang} onUnlock={() => setAdminUnlocked(true)} />
+        )}
       </main>
 
       <footer className="border-t border-violet-100 py-8 text-center text-xs text-slate-400">
@@ -676,6 +655,46 @@ function AnswerRow({ label, value }) {
 
 /* ------------------------------- ADMIN ------------------------------- */
 
+const ADMIN_PASSWORD = "MZD@44";
+
+function AdminGate({ lang, onUnlock }) {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
+  const isAr = lang === "ar";
+
+  const submit = (e) => {
+    e.preventDefault();
+    if (value === ADMIN_PASSWORD) { onUnlock(); }
+    else { setError(true); }
+  };
+
+  return (
+    <div className="pt-24 max-w-sm mx-auto text-center">
+      <div className="w-14 h-14 rounded-full bg-violet-100 text-violet-600 flex items-center justify-center mx-auto mb-6">
+        <Settings size={22} />
+      </div>
+      <h1 className="text-xl font-extrabold text-violet-950 mb-2">
+        {isAr ? "دخول الإدارة" : "Admin Access"}
+      </h1>
+      <p className="text-sm text-slate-500 mb-6">
+        {isAr ? "هاي الصفحة محمية. أدخلي كلمة السر للمتابعة." : "This page is protected. Enter the password to continue."}
+      </p>
+      <form onSubmit={submit}>
+        <input
+          type="password"
+          value={value}
+          onChange={(e) => { setValue(e.target.value); setError(false); }}
+          placeholder={isAr ? "كلمة السر" : "Password"}
+          className={`w-full rounded-full border px-5 py-3.5 text-sm outline-none text-center mb-3 ${error ? "border-rose-400 focus:border-rose-500" : "border-violet-200 focus:border-violet-500"}`}
+          autoFocus
+        />
+        {error && <p className="text-xs text-rose-500 mb-3">{isAr ? "كلمة السر غلط" : "Incorrect password"}</p>}
+        <Button type="submit" className="w-full">{isAr ? "دخول" : "Unlock"}</Button>
+      </form>
+    </div>
+  );
+}
+
 function AdminView({ t, lang, store }) {
   const [tab, setTab] = useState("overview");
   const tabs = [
@@ -897,3 +916,4 @@ function AdminBookings({ t, lang, store }) {
     </div>
   );
 }
+ 
