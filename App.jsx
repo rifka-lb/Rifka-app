@@ -268,7 +268,14 @@ function useStore() {
         if (cancelled) return;
         if (c.status === "fulfilled" && c.value) setCategories(JSON.parse(c.value.value));
         else await window.storage.set("rifka_categories_v2", JSON.stringify(DEFAULT_CATEGORIES), true);
-        if (s.status === "fulfilled" && s.value) setSpecialists(JSON.parse(s.value.value));
+        if (s.status === "fulfilled" && s.value) {
+          const stored = JSON.parse(s.value.value);
+          const have = new Set(stored.map((x) => x.id));
+          const added = DEFAULT_SPECIALISTS.filter((d) => !have.has(d.id));
+          const merged = added.length ? [...stored, ...added] : stored;
+          setSpecialists(merged);
+          if (added.length) { try { await window.storage.set("rifka_specialists_v2", JSON.stringify(merged), true); } catch (e) { console.error(e); } }
+        }
         else await window.storage.set("rifka_specialists_v2", JSON.stringify(DEFAULT_SPECIALISTS), true);
         if (b.status === "fulfilled" && b.value) setBookings(JSON.parse(b.value.value));
         if (a.status === "fulfilled" && a.value) setAnalytics(JSON.parse(a.value.value));
