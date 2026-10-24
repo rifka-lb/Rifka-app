@@ -79,7 +79,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/nnlecointraining/30min", whatsapp: "96170809046",
   },
   {
-    id: "s_caroline", order: 3, categoryIds: ["c6", "c8"], active: true, icon: "palette",
+    id: "s_caroline", order: 3, categoryIds: ["c6", "c8"], active: false, icon: "palette",
     name_en: "Caroline Nour", name_ar: "كارولين نور",
     title_en: "Art Therapist, Jungian & NLP Coach", title_ar: "معالجة بالفن، مدرّبة يونغية و NLP",
     bio_en: "Art therapy practitioner, Neurographic trainer, Jungian coach, and NLP Master Practitioner.",
@@ -129,6 +129,19 @@ const DEFAULT_SPECIALISTS = [
     expertise_ar: "الحركة النفسية، نمو الطفل",
     price: "Contact for pricing", credentials_en: "Certified Psychomotor Therapist", credentials_ar: "أخصائية حركة نفسية معتمدة",
     calendly: "https://calendly.com/yarawehbe02/45min", whatsapp: "96171946259",
+  },
+  {
+    id: "s_zaynab", order: 7, categoryIds: ["c8", "c3"], active: true, icon: "activity",
+    name_en: "Zaynab Sowaydan", name_ar: "زينب سويدان",
+    title_en: "Life & Fitness Coach, CBT Practitioner, NLP & PEAT Master Practitioner", title_ar: "كوتش حياة ولياقة، ممارِسة CBT، ماستر برآكتيشنر NLP وPEAT",
+    bio_en: "Life & Fitness Coach and CBT Practitioner, NLP and PEAT Master Practitioner, with training in family and marriage guidance. Supports individuals and couples in building healthier habits, shifting limiting thought patterns, and creating lasting change in their relationships and daily lives. Sessions are practical, structured, and tailored to each person's goals.",
+    bio_ar: "كوتش حياة ولياقة، وممارِسة CBT، وماستر برآكتيشنر NLP وPEAT، ولها تدريب في الإرشاد الأسري والزواجي. تدعم الأفراد والأزواج ببناء عادات أصح، وتغيير أنماط التفكير التي تعيق التقدم، وتحقيق تغيير حقيقي في حياتهم وعلاقاتهم. جلساتها عملية ومنظمة ومبنية على أهداف كل شخص.",
+    location_en: "Online", location_ar: "أونلاين",
+    mode: "online", languages: "AR, EN",
+    expertise_en: "Life Coaching, Fitness Coaching, CBT, NLP, PEAT, Family & Marriage Guidance",
+    expertise_ar: "كوتشينغ الحياة، كوتشينغ اللياقة، CBT، NLP، PEAT، الإرشاد الأسري والزواجي",
+    price: "Contact for pricing", credentials_en: "NLP & PEAT Master Practitioner, CBT Practitioner", credentials_ar: "ماستر برآكتيشنر NLP وPEAT، ممارِسة CBT",
+    calendly: "https://calendly.com/zedzed281181/session", whatsapp: "96170959875",
   },
 ];
 
