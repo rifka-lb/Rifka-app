@@ -269,12 +269,15 @@ function useStore() {
         if (c.status === "fulfilled" && c.value) setCategories(JSON.parse(c.value.value));
         else await window.storage.set("rifka_categories_v2", JSON.stringify(DEFAULT_CATEGORIES), true);
         if (s.status === "fulfilled" && s.value) {
-          const stored = JSON.parse(s.value.value);
+          const parsed = JSON.parse(s.value.value);
+          const defById = new Map(DEFAULT_SPECIALISTS.map((d) => [d.id, d]));
+          const stored = parsed.map((x) => (defById.has(x.id) ? { ...x, active: defById.get(x.id).active } : x));
           const have = new Set(stored.map((x) => x.id));
           const added = DEFAULT_SPECIALISTS.filter((d) => !have.has(d.id));
           const merged = added.length ? [...stored, ...added] : stored;
+          const changed = added.length > 0 || stored.some((x, i) => x.active !== parsed[i].active);
           setSpecialists(merged);
-          if (added.length) { try { await window.storage.set("rifka_specialists_v2", JSON.stringify(merged), true); } catch (e) { console.error(e); } }
+          if (changed) { try { await window.storage.set("rifka_specialists_v2", JSON.stringify(merged), true); } catch (e) { console.error(e); } }
         }
         else await window.storage.set("rifka_specialists_v2", JSON.stringify(DEFAULT_SPECIALISTS), true);
         if (b.status === "fulfilled" && b.value) setBookings(JSON.parse(b.value.value));
