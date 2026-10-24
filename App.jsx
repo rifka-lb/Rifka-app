@@ -523,7 +523,7 @@ function HomeView({ t, lang, store, search, setSearch, activeFilter, setFilter, 
 
       <div className="flex gap-2 overflow-x-auto pb-2 mb-6 -mx-1 px-1">
         <FilterPill active={activeFilter === "all"} onClick={() => setFilter("all")}>{t.allFilter}</FilterPill>
-        {store.categories.filter((c) => c.active).map((c) => (
+        {store.categories.filter((c) => c.active && store.specialists.some((sp) => sp.active && sp.categoryIds.includes(c.id))).map((c) => (
           <FilterPill key={c.id} active={activeFilter === c.id} onClick={() => setFilter(c.id)}>{lang === "ar" ? c.ar : c.en}</FilterPill>
         ))}
       </div>
