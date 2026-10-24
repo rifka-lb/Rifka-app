@@ -3,7 +3,7 @@ import {
   Globe, ArrowLeft, ArrowRight, MessageCircle, Calendar, MapPin,
   CheckCircle2, Settings, BarChart3, Plus, Pencil, Trash2, Users,
   ChevronRight, Video, Building2, Loader2, LayoutGrid, Search,
-  Brain, Heart, Palette, Puzzle, MessagesSquare, Activity, User
+  Brain, Heart, Palette, Puzzle, MessagesSquare, Activity, Dumbbell, User
 
 } from "lucide-react";
 
@@ -131,7 +131,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/yarawehbe02/45min", whatsapp: "96171946259",
   },
   {
-    id: "s_zaynab", order: 7, categoryIds: ["c8", "c3"], active: true, icon: "activity",
+    id: "s_zaynab", order: 7, categoryIds: ["c8", "c3"], active: true, icon: "dumbbell",
     name_en: "Zaynab Sowaydan", name_ar: "زينب سويدان",
     title_en: "Life & Fitness Coach, CBT Practitioner, NLP & PEAT Master Practitioner", title_ar: "كوتش حياة ولياقة، ممارِسة CBT، ماستر برآكتيشنر NLP وPEAT",
     bio_en: "Life & Fitness Coach and CBT Practitioner, NLP and PEAT Master Practitioner, with training in family and marriage guidance. Supports individuals and couples in building healthier habits, shifting limiting thought patterns, and creating lasting change in their relationships and daily lives. Sessions are practical, structured, and tailored to each person's goals.",
@@ -319,7 +319,7 @@ function OrbitMark({ size = 22 }) {
   );
 }
 
-const SPECIALTY_ICONS = { brain: Brain, heart: Heart, palette: Palette, puzzle: Puzzle, messages: MessagesSquare, activity: Activity };
+const SPECIALTY_ICONS = { brain: Brain, heart: Heart, palette: Palette, puzzle: Puzzle, messages: MessagesSquare, activity: Activity, dumbbell: Dumbbell };
 
 function Avatar({ name, icon, colorIndex, size = 56 }) {
   const Icon = SPECIALTY_ICONS[icon] || User;
