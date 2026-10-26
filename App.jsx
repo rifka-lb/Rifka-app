@@ -79,7 +79,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/nnlecointraining/30min", whatsapp: "96170809046",
   },
   {
-    id: "s_caroline", order: 3, categoryIds: ["c6", "c8"], active: false, icon: "palette",
+    id: "s_caroline", order: 3, categoryIds: ["c6", "c8"], active: true, icon: "palette",
     name_en: "Caroline Nour", name_ar: "كارولين نور",
     title_en: "Art Therapist, Jungian & NLP Coach", title_ar: "معالجة بالفن، مدرّبة يونغية و NLP",
     bio_en: "Art therapy practitioner, Neurographic trainer, Jungian coach, and NLP Master Practitioner.",
