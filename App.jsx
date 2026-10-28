@@ -162,7 +162,7 @@ const DEFAULT_SPECIALISTS = [
     title_en: "Resilience & Grief Coach · Corporate Trainer · Author · TEDx Speaker", title_ar: "مدرّبة في المرونة النفسية والتعافي من الفقد · مدرّبة مؤسسات · كاتبة · متحدثة TEDx",
     bio_en: "One-on-one coaching for women navigating identity loss and major life transitions while still carrying the responsibilities others see. Together we work through the grief beneath the outward strength, rebuild a sense of self, and find your footing again, using NLP, hypnosis, Time Line Therapy®, and yoga-based practices for grounding the body and mind. Sessions are available in Arabic, English, and French.",
     bio_ar: "جلسات كوتشينغ فردية للنساء اللواتي يمررن بفقدان الهوية أو تحوّل كبير في حياتهن، وما زلن يحملن مسؤوليات يراها الآخرون بوضوح. نعمل معاً على الحزن الكامن خلف القوة الظاهرة، ونعيد بناء إحساسك بذاتك، ونجد توازنك من جديد، باستخدام تقنيات NLP والتنويم الإيحائي وTime Line Therapy®، إلى جانب ممارسات اليوغا لتثبيت الجسد والعقل. الجلسات متوفرة بالعربية والإنجليزية والفرنسية.",
-    location_en: "Online", location_ar: "أونلاين",
+    location_en: "Online · Lebanon", location_ar: "أونلاين · لبنان",
     mode: "online", languages: "AR, EN, FR",
     expertise_en: "Resilience, Grief & Loss, Identity & Life Transitions, NLP, Hypnosis, Time Line Therapy®, Yoga-based Practices",
     expertise_ar: "المرونة النفسية، الحزن والفقد، الهوية والتحولات الحياتية، NLP، التنويم الإيحائي، Time Line Therapy®، ممارسات اليوغا",
