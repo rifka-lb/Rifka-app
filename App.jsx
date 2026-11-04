@@ -79,7 +79,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/nnlecointraining/30min", whatsapp: "96170809046",
   },
   {
-    id: "s_caroline", order: 3, categoryIds: ["c6", "c8"], active: true, icon: "palette",
+    id: "s_caroline", order: 6, categoryIds: ["c6", "c8"], active: true, icon: "palette",
     name_en: "Caroline Nour", name_ar: "كارولين نور",
     title_en: "Art Therapist, Jungian & NLP Coach", title_ar: "معالجة بالفن، مدرّبة يونغية و NLP",
     bio_en: "Art therapy practitioner, Neurographic trainer, Jungian coach, and NLP Master Practitioner.",
@@ -92,7 +92,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/cncarolinenour/30min", whatsapp: "96178934436",
   },
   {
-    id: "s_hanady", order: 4, categoryIds: ["c5", "c4"], active: true, icon: "puzzle",
+    id: "s_hanady", order: 7, categoryIds: ["c5", "c4"], active: true, icon: "puzzle",
     name_en: "Hanady Abou Meghli", name_ar: "هنادي أبو مغلي",
     title_en: "Early Childhood · Teen & Adolescent · Family", title_ar: "الطفولة المبكرة · المراهقين · العائلة",
     bio_en: "Specialist in special education, behavioral intervention, child & adolescent mental health, and family guidance.",
@@ -105,7 +105,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/hanadi-kronful/30min", whatsapp: "96170005833",
   },
   {
-    id: "s_rajaa", order: 5, categoryIds: ["c3", "c8"], active: true, icon: "messages",
+    id: "s_rajaa", order: 8, categoryIds: ["c3", "c8"], active: true, icon: "messages",
     name_en: "Rajaa Khalil", name_ar: "رجاء خليل",
     title_en: "Family & Social Counselor, NLP Master Practitioner", title_ar: "مستشارة أسرية واجتماعية، ممارِسة NLP معتمدة",
     bio_en: "Family and social counselor specializing in family relationships, parenting, and emotional wellbeing. NLP Master Practitioner.",
@@ -118,7 +118,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/rajaakhalil07/30min", whatsapp: "9613020338",
   },
   {
-    id: "s_yara", order: 6, categoryIds: ["c7"], active: true, icon: "activity",
+    id: "s_yara", order: 4, categoryIds: ["c7"], active: true, icon: "activity",
     name_en: "Yara Wehbe", name_ar: "يارا وهبي",
     title_en: "Psychomotor Therapist", title_ar: "أخصائية الحركة النفسية",
     bio_en: "Supports emotional regulation and development through body and movement.",
@@ -131,7 +131,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/yarawehbe02/45min", whatsapp: "96171946259",
   },
   {
-    id: "s_zaynab", order: 7, categoryIds: ["c8", "c3"], active: true, icon: "heartpulse",
+    id: "s_zaynab", order: 9, categoryIds: ["c8", "c3"], active: true, icon: "heartpulse",
     name_en: "Zaynab Sowaydan", name_ar: "زينب سويدان",
     title_en: "Life & Fitness Coach · CBT · NLP & PEAT", title_ar: "كوتش حياة ولياقة · CBT · NLP وPEAT",
     bio_en: "Life & Fitness Coach and CBT Practitioner, NLP and PEAT Master Practitioner, with training in family and marriage guidance. Supports individuals and couples in building healthier habits, shifting limiting thought patterns, and creating lasting change in their relationships and daily lives. Sessions are practical, structured, and tailored to each person's goals.",
@@ -144,7 +144,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/zedzed281181/session", whatsapp: "96170959875",
   },
   {
-    id: "s_ibtihal", order: 8, categoryIds: ["c8", "c3"], active: true, icon: "heart",
+    id: "s_ibtihal", order: 10, categoryIds: ["c8", "c3"], active: true, icon: "heart",
     name_en: "Ibtihal Al-Musawi", name_ar: "ابتهال الموسوي",
     title_en: "Clinical Psychology Master's Student · Life Coach · Family & Marriage Guide", title_ar: "طالبة ماجستير علم نفس إكلينيكي · لايف كوتش · مرشدة أسرية وزوجية",
     bio_en: "Currently completing her Master's in Clinical Psychology, internationally certified Life Coach and trainer, and Family & Marriage Guide trained at NovaVision Academy. Supports individuals and couples in understanding themselves, strengthening their relationships and building a more balanced daily life. Sessions are offered in Arabic, online, from anywhere.",
@@ -157,7 +157,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/ibtihalalmusawi3578/30min", whatsapp: "9647734278348",
   },
   {
-    id: "s_zeina", order: 9, categoryIds: ["c8"], active: true, icon: "sprout",
+    id: "s_zeina", order: 5, categoryIds: ["c8"], active: true, icon: "sprout",
     name_en: "Zeina Daroub", name_ar: "زينة الضاروب",
     title_en: "Resilience & Grief Coach · Corporate Trainer · Author · TEDx Speaker", title_ar: "مدرّبة في المرونة النفسية والتعافي من الفقد · مدرّبة مؤسسات · كاتبة · متحدثة TEDx",
     bio_en: "One-on-one coaching for women navigating identity loss and major life transitions while still carrying the responsibilities others see. Together we work through the grief beneath the outward strength, rebuild a sense of self, and find your footing again, using NLP, hypnosis, Time Line Therapy®, and yoga-based practices for grounding the body and mind. Sessions are available in Arabic, English, and French.",
@@ -170,7 +170,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://link.msgsndr.com/widget/bookings/my-calendar-2024-discovery-call-89cf221a-3af2-444f-8bcb-04d38ebd4b23", whatsapp: "96181448034",
   },
   {
-    id: "s_perla", order: 10, categoryIds: ["c7", "c5", "c3"], active: true, icon: "activity",
+    id: "s_perla", order: 3, categoryIds: ["c7", "c5", "c3"], active: true, icon: "activity",
     name_en: "Perla El Achkar", name_ar: "بيرلا الأشقر",
     title_en: "Psychomotor Therapist · Family Coach", title_ar: "أخصائية حركة نفسية · كوتش أسري",
     bio_en: "10 years of experience working with children and teenagers with learning difficulties, neurodevelopmental delays and disorders such as ADHD, ASD and intellectual disability. Conducts sessions, tailors individualized action plans, and guides parents to support their children and build healthy family dynamics. Also a freelance trainer for 5+ years in special needs consultancy, soft skills, and child protection and safeguarding.",
@@ -297,11 +297,11 @@ function useStore() {
         if (s.status === "fulfilled" && s.value) {
           const parsed = JSON.parse(s.value.value);
           const defById = new Map(DEFAULT_SPECIALISTS.map((d) => [d.id, d]));
-          const stored = parsed.map((x) => (defById.has(x.id) ? { ...x, active: defById.get(x.id).active } : x));
+          const stored = parsed.map((x) => (defById.has(x.id) ? { ...x, active: defById.get(x.id).active, order: defById.get(x.id).order } : x));
           const have = new Set(stored.map((x) => x.id));
           const added = DEFAULT_SPECIALISTS.filter((d) => !have.has(d.id));
           const merged = added.length ? [...stored, ...added] : stored;
-          const changed = added.length > 0 || stored.some((x, i) => x.active !== parsed[i].active);
+          const changed = added.length > 0 || stored.some((x, i) => x.active !== parsed[i].active || x.order !== parsed[i].order);
           setSpecialists(merged);
           if (changed) { try { await window.storage.set("rifka_specialists_v2", JSON.stringify(merged), true); } catch (e) { console.error(e); } }
         }
