@@ -169,6 +169,19 @@ const DEFAULT_SPECIALISTS = [
     price: "Contact for pricing", credentials_en: "Corporate Trainer, Author, TEDx Speaker", credentials_ar: "مدرّبة مؤسسات، كاتبة، متحدثة TEDx",
     calendly: "https://link.msgsndr.com/widget/bookings/my-calendar-2024-discovery-call-89cf221a-3af2-444f-8bcb-04d38ebd4b23", whatsapp: "96181448034",
   },
+  {
+    id: "s_perla", order: 10, categoryIds: ["c7", "c5", "c3"], active: true, icon: "activity",
+    name_en: "Perla El Achkar", name_ar: "بيرلا الأشقر",
+    title_en: "Psychomotor Therapist · Family Coach", title_ar: "أخصائية حركة نفسية · كوتش أسري",
+    bio_en: "10 years of experience working with children and teenagers with learning difficulties, neurodevelopmental delays and disorders such as ADHD, ASD and intellectual disability. Conducts sessions, tailors individualized action plans, and guides parents to support their children and build healthy family dynamics. Also a freelance trainer for 5+ years in special needs consultancy, soft skills, and child protection and safeguarding.",
+    bio_ar: "خبرة 10 سنوات في العمل مع الأطفال والمراهقين الذين لديهم صعوبات تعلّم وتأخر أو اضطرابات نمائية مثل ADHD وASD والإعاقة الذهنية. تقدّم الجلسات، وتضع خططاً فردية لكل حالة، وترافق الأهل لدعم أطفالهم وبناء ديناميكية أسرية سليمة. كما أنها مدرّبة مستقلة منذ أكثر من 5 سنوات في الاستشارات الخاصة بذوي الاحتياجات، والمهارات الناعمة، وحماية الطفل.",
+    location_en: "Online · Reflexions Art and Therapy Clinic, Araya (Damascus Road)", location_ar: "أونلاين · عيادة Reflexions Art and Therapy، عرايا (طريق الشام)",
+    mode: "both", languages: "AR, EN, FR",
+    expertise_en: "Psychomotor Therapy, Learning Difficulties, ADHD, ASD, Intellectual Disability, Parent Guidance, Family Coaching, Child Protection & Safeguarding",
+    expertise_ar: "الحركة النفسية، صعوبات التعلّم، ADHD، ASD، الإعاقة الذهنية، إرشاد الأهل، الكوتشينغ الأسري، حماية الطفل",
+    price: "Contact for pricing", credentials_en: "BA in Psychomotor Therapy (Lebanese University); Family Coaching Certificate (Family Coaching Institute, Nancy Doyon, Canada); Training of Trainers (Federation of Congregations in Lebanon); Child Protection & Safeguarding (Pontifical Gregorian University, Rome)", credentials_ar: "إجازة في العلاج بالحركة النفسية (الجامعة اللبنانية)؛ شهادة كوتشينغ أسري (Family Coaching Institute – نانسي دويون، كندا)؛ تدريب مدرّبين (اتحاد الرهبانيات في لبنان)؛ حماية الطفل (الجامعة الغريغورية البابوية، روما)",
+    calendly: "https://calendly.com/perlaelachkar/new-meeting", whatsapp: "96171529124",
+  },
 ];
 
 const T = {
