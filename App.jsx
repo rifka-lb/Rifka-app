@@ -79,7 +79,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/nnlecointraining/30min", whatsapp: "96170809046",
   },
   {
-    id: "s_caroline", order: 10, categoryIds: ["c6", "c8"], active: false, icon: "palette",
+    id: "s_caroline", order: 11, categoryIds: ["c6", "c8"], active: false, icon: "palette",
     name_en: "Caroline Nour", name_ar: "كارولين نور",
     title_en: "Art Therapist, Jungian & NLP Coach", title_ar: "معالجة بالفن، مدرّبة يونغية و NLP",
     bio_en: "Art therapy practitioner, Neurographic trainer, Jungian coach, and NLP Master Practitioner.",
@@ -92,7 +92,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/cncarolinenour/30min", whatsapp: "96178934436",
   },
   {
-    id: "s_hanady", order: 6, categoryIds: ["c5", "c4"], active: true, icon: "puzzle",
+    id: "s_hanady", order: 7, categoryIds: ["c5", "c4"], active: true, icon: "puzzle",
     name_en: "Hanady Abou Meghli", name_ar: "هنادي أبو مغلي",
     title_en: "Early Childhood · Teen & Adolescent · Family", title_ar: "الطفولة المبكرة · المراهقين · العائلة",
     bio_en: "Specialist in special education, behavioral intervention, child & adolescent mental health, and family guidance.",
@@ -105,7 +105,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/hanadi-kronful/30min", whatsapp: "96170005833",
   },
   {
-    id: "s_rajaa", order: 7, categoryIds: ["c3", "c8"], active: true, icon: "messages",
+    id: "s_rajaa", order: 8, categoryIds: ["c3", "c8"], active: true, icon: "messages",
     name_en: "Rajaa Khalil", name_ar: "رجاء خليل",
     title_en: "Family & Social Counselor, NLP Master Practitioner", title_ar: "مستشارة أسرية واجتماعية، ممارِسة NLP معتمدة",
     bio_en: "Family and social counselor specializing in family relationships, parenting, and emotional wellbeing. NLP Master Practitioner.",
@@ -131,7 +131,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/yarawehbe02/45min", whatsapp: "96171946259",
   },
   {
-    id: "s_zaynab", order: 8, categoryIds: ["c8", "c3"], active: true, icon: "heartpulse",
+    id: "s_zaynab", order: 9, categoryIds: ["c8", "c3"], active: true, icon: "heartpulse",
     name_en: "Zaynab Sowaydan", name_ar: "زينب سويدان",
     title_en: "Life & Fitness Coach · CBT · NLP & PEAT", title_ar: "كوتش حياة ولياقة · CBT · NLP وPEAT",
     bio_en: "Life & Fitness Coach and CBT Practitioner, NLP and PEAT Master Practitioner, with training in family and marriage guidance. Supports individuals and couples in building healthier habits, shifting limiting thought patterns, and creating lasting change in their relationships and daily lives. Sessions are practical, structured, and tailored to each person's goals.",
@@ -144,7 +144,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/zedzed281181/session", whatsapp: "96170959875",
   },
   {
-    id: "s_ibtihal", order: 9, categoryIds: ["c8", "c3"], active: true, icon: "heart",
+    id: "s_ibtihal", order: 10, categoryIds: ["c8", "c3"], active: true, icon: "heart",
     name_en: "Ibtihal Al-Musawi", name_ar: "ابتهال الموسوي",
     title_en: "Clinical Psychology Master's Student · Life Coach · Family & Marriage Guide", title_ar: "طالبة ماجستير علم نفس إكلينيكي · لايف كوتش · مرشدة أسرية وزوجية",
     bio_en: "Currently completing her Master's in Clinical Psychology, internationally certified Life Coach and trainer, and Family & Marriage Guide trained at NovaVision Academy. Supports individuals and couples in understanding themselves, strengthening their relationships and building a more balanced daily life. Sessions are offered in Arabic, online, from anywhere.",
@@ -181,6 +181,19 @@ const DEFAULT_SPECIALISTS = [
     expertise_ar: "الحركة النفسية، صعوبات التعلّم، ADHD، ASD، الإعاقة الذهنية، إرشاد الأهل، الكوتشينغ الأسري، حماية الطفل",
     price: "Contact for pricing", credentials_en: "BA in Psychomotor Therapy (Lebanese University); Family Coaching Certificate (Family Coaching Institute, Nancy Doyon, Canada); Training of Trainers (Federation of Congregations in Lebanon); Child Protection & Safeguarding (Pontifical Gregorian University, Rome)", credentials_ar: "إجازة في العلاج بالحركة النفسية (الجامعة اللبنانية)؛ شهادة كوتشينغ أسري (Family Coaching Institute – نانسي دويون، كندا)؛ تدريب مدرّبين (اتحاد الرهبانيات في لبنان)؛ حماية الطفل (الجامعة الغريغورية البابوية، روما)",
     calendly: "https://calendly.com/perlaelachkar/new-meeting", whatsapp: "96171529124",
+  },
+  {
+    id: "s_hanadi_chaya", order: 6, categoryIds: ["c3", "c8"], active: true, icon: "messages",
+    name_en: "Hanadi Chaya", name_ar: "هنادي شيا",
+    title_en: "Family & Marriage Guidance Practitioner · NLP Master Practitioner", title_ar: "ممارِسة إرشاد أسري وزوجي · ممارِسة NLP ماستر",
+    bio_en: "Specialized in family guidance, marital relationships, parenting and personal development. Supports individuals, couples and families in understanding emotional patterns, strengthening relationships, fostering emotional awareness and building meaningful connections through a compassionate and practical approach.",
+    bio_ar: "متخصصة في الإرشاد الأسري والعلاقات الزوجية والتربية والتطوير الشخصي. ترافق الأفراد والأزواج والعائلات على فهم الأنماط العاطفية، وتقوية العلاقات، وتنمية الوعي العاطفي، وبناء روابط ذات معنى بأسلوب إنساني وعملي.",
+    location_en: "Online · In person, Choueifat", location_ar: "أونلاين · حضوري، الشويفات",
+    mode: "both", languages: "AR",
+    expertise_en: "Family Guidance, Marital Relationships, Parenting, Personal Development, Emotional Awareness, NLP",
+    expertise_ar: "الإرشاد الأسري، العلاقات الزوجية، التربية، التطوير الشخصي، الوعي العاطفي، NLP",
+    price: "Contact for pricing", credentials_en: "Marriage & Family Guidance Practitioner (NovaVision); NLP Master Practitioner (Inout Academy)", credentials_ar: "ممارِسة إرشاد زواجي وأسري (NovaVision)؛ ممارِسة NLP ماستر (Inout Academy)",
+    calendly: "https://calendly.com/hanadi-chaya/session", whatsapp: "96170786853",
   },
 ];
 
