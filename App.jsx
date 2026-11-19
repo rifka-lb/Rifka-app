@@ -79,7 +79,7 @@ const DEFAULT_SPECIALISTS = [
     calendly: "https://calendly.com/nnlecointraining/30min", whatsapp: "96170809046",
   },
   {
-    id: "s_caroline", order: 11, categoryIds: ["c6", "c8"], active: false, icon: "palette",
+    id: "s_caroline", order: 12, categoryIds: ["c6", "c8"], active: false, icon: "palette",
     name_en: "Caroline Nour", name_ar: "كارولين نور",
     title_en: "Art Therapist, Jungian & NLP Coach", title_ar: "معالجة بالفن، مدرّبة يونغية و NLP",
     bio_en: "Art therapy practitioner, Neurographic trainer, Jungian coach, and NLP Master Practitioner.",
@@ -194,6 +194,19 @@ const DEFAULT_SPECIALISTS = [
     expertise_ar: "الإرشاد الأسري، العلاقات الزوجية، التربية، التطوير الشخصي، الوعي العاطفي، NLP",
     price: "Contact for pricing", credentials_en: "Marriage & Family Guidance Practitioner (NovaVision); NLP Master Practitioner (Inout Academy)", credentials_ar: "ممارِسة إرشاد زواجي وأسري (NovaVision)؛ ممارِسة NLP ماستر (Inout Academy)",
     calendly: "https://calendly.com/hanadi-chaya/session", whatsapp: "96170786853",
+  },
+  {
+    id: "s_elsy", order: 11, categoryIds: ["c3", "c8"], active: true, icon: "heart",
+    name_en: "Elsy Mina", name_ar: "السي مينا",
+    title_en: "Health Social Worker · Marriage & Family Counselor · Health & Wellness Coach", title_ar: "أخصائية اجتماعية صحية · مرشدة أسرية وزوجية · كوتش صحة وعافية",
+    bio_en: "Health and social work professional with 12+ years of experience in international NGOs, specializing in mental health, health inclusion, disability inclusion, and health management and quality. An experienced trainer, mentor and capacity-building facilitator, developing curricula and training programs in health, mental health, positive parenting and personal development. Trained in Social Theatre (Playback), Drama Therapy, Art Therapy, Peer Support Groups and Emotional Support Groups, with expertise in supporting vulnerable children, families and communities.",
+    bio_ar: "مختصة في الصحة والعمل الاجتماعي بخبرة تفوق 12 سنة في منظمات دولية غير حكومية، في الصحة النفسية والدمج الصحي ودمج ذوي الإعاقة وإدارة الصحة والجودة. مدرّبة ومرشدة وميسّرة لبناء القدرات، وتطوّر مناهج وبرامج تدريبية في الصحة والصحة النفسية والتربية الإيجابية والتطوير الشخصي. مدرَّبة في المسرح الاجتماعي (Playback) والدراما والفن العلاجي ومجموعات الدعم بين الأقران ومجموعات الدعم العاطفي، مع خبرة في دعم الأطفال والعائلات والمجتمعات الهشّة.",
+    location_en: "Online", location_ar: "أونلاين",
+    mode: "online", languages: "AR, EN, FR",
+    expertise_en: "Marriage & Family Counseling, Health & Wellness Coaching, Mental Health, Positive Parenting, Disability Inclusion, Playback Theatre, Peer & Emotional Support Groups",
+    expertise_ar: "الإرشاد الأسري والزواجي، كوتشينغ الصحة والعافية، الصحة النفسية، التربية الإيجابية، دمج ذوي الإعاقة، مسرح Playback، مجموعات الدعم",
+    price: "Contact for pricing", credentials_en: "Advanced Family & Marriage Counselor (American and Canadian board); Playback Practitioner (Joe Salas); Transcendent Coach (Coach Circle Academy, ICF); Health Management & Quality Diploma (GATES); Art Therapy certificate; MHPSS Diploma (AUB)", credentials_ar: "مرشدة أسرية وزوجية متقدمة (مجلس أمريكي وكندي)؛ ممارِسة Playback (Joe Salas)؛ كوتش Transcendent (Coach Circle Academy، ICF)؛ دبلوم إدارة الصحة والجودة (GATES)؛ شهادة في العلاج بالفن؛ دبلوم MHPSS (الجامعة الأمريكية في بيروت)",
+    calendly: "https://calendly.com/mina-elsyelias/new-meeting", whatsapp: "9613138272",
   },
 ];
 
